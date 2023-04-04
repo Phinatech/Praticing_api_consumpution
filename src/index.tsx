@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router-dom";
-import { element } from "./routes/Allroutes";
+import { element } from "./routes/Allrouting";
 
 const pratice = new QueryClient();
 const root = ReactDOM.createRoot(
