@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router-dom";
-import { element } from "./routes/Allrouting";
+import { element } from "./routes/Routing3";
 
 const pratice = new QueryClient();
 const root = ReactDOM.createRoot(
