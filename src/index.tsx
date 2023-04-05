@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router-dom";
-import { element } from "./routes/Routing3";
+import { pratice4 } from "./routes/Routing4";
+import Loading from "./components/Loading";
 
 const pratice = new QueryClient();
 const root = ReactDOM.createRoot(
@@ -13,10 +14,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={pratice}>
-      <RouterProvider router={element} />
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <Suspense fallback={<Loading />}>
+      <QueryClientProvider client={pratice}>
+        <RouterProvider router={pratice4} />
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </Suspense>
   </React.StrictMode>
 );
 
